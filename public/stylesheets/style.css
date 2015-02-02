@@ -1,0 +1,68 @@
+@font-face {
+    font-family:"Robotor";
+    src: url("robotor.ttf") format('truetype');
+}
+
+body {
+  font-family: "Robotor", Arial;
+  color: black;
+  height: 100%;
+}
+
+a {
+  color: black;
+}
+
+/*Header styling*/
+.header {
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 2px solid #3d1b3e;
+}
+
+#navlogo {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: left;
+  vertical-align: middle;
+  padding-top: 30px;
+  padding-bottom: 27px;
+}
+
+#navlinks {
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: right;
+  vertical-align: middle;
+  padding-top: 37px;
+  padding-bottom: 27px;
+}
+#navlinks a{
+  margin-left: 20px;
+}
+
+/* TWITTER STREAM */
+#tweets {
+  border: 2px solid black;
+  margin-right: -10px;
+  margin-left: -10px;
+}
+
+.middleSection {
+  text-align: center;
+  overflow: scroll;
+}
+
+.row {
+  text-align: center;
+}
+
+#map {
+  height: 450px;
+  width: 100%;
+  margin-bottom: 50px;
+  margin: 0 auto;
+  border: 2px solid #eee;
+}

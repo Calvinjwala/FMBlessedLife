@@ -1,0 +1,48 @@
+<% include partials/header %>
+
+<div class="container-fluid">
+  <div class="rows">
+
+    <div class="header col-lg-12 col-md-12">
+      <h4 class="col-lg-8 col-md-8" id="navlogo"><a href="/">#FMBLESSEDLIFE</a></h4>
+      <p class="col-lg-4 col-md-4" id="navlinks"><a href="#">#about</a><a href="#">#contact</a></p>
+    </div>
+
+    <div class="col-lg-6 col-md-6">
+      <div class="col-lg-12 col-md-12">
+        <h4>A war between hashtags: #blessed v. #fml</h4>
+        <button id="tweet-start">Let the Countdown Begin.</button>
+      </div>
+
+      <div class="middleSection col-lg-6 col-md-6" id="tweets">
+        <!-- <div class="twitstream"></div> -->
+        <h1>#blessed</h1>
+      </div>
+
+      <div class="middleSection col-lg-6 col-md-6" id="tweets">
+        <h1>#fml</h1>
+      </div>
+
+    </div>
+
+    <div class="middleSection col-lg-6 col-md-6">
+      <div id="map">
+      </div>
+    </div>
+
+
+  </div>
+</div>
+
+<script>
+  $(document).ready(function(){
+    console.log("hello")
+  });
+
+  $("#tweet-start").on("click", function () {
+    globeTweet.startStream();
+  })
+</script>
+
+</body>
+</html>
