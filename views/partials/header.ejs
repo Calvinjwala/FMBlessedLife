@@ -13,62 +13,13 @@
 
 <script type="text/javascript" src="javascripts/globe_tweets.js"></script>
 
+<script src="/socket.io/socket.io.js"></script>
+
 <!-- CSS -->
-<link type="text/css" rel="stylesheet" href="stylesheets/style.css">
-
-
-   <script type="text/javascript" src="https://www.googleapis.com/geolocation/v1/geolocate?key=AIzaSyCoMjjBIo1yKmAod2WL-hvmFF9M9YXNYtQ"></script>
+<link type="text/css" rel="stylesheet" href="/stylesheets/style.css">
 
   <meta charset="UTF-8">
   <title>#fmblessedlife</title>
-
-  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyARgWG_28NDdxfLNXtMdU62yxqfKWrTS2Q">
-  </script>
-
-    <script type="text/javascript">
-
-      function initialize() {
-        var mapOptions = {
-          center: {
-            lat: 38.031, lng: -96.108
-          },
-          zoom: 3
-        };
-
-        var map = new google.maps.Map(document.getElementById('map'),
-            mapOptions);
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
-        console.log("working")
-
-        var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
-        var icons = {
-          blessed: {
-            icon: iconBase + 'images/parking_lot_maps.png'
-          },
-          fml: {
-            icon: iconBase + 'images/library_maps.png'
-          }
-        };
-
-      function addMarkerFML (feature) {
-        var marker = new google.maps.Marker({
-          position: feature.position,
-          icon: icons[feature.type].icon,
-          map: map
-        });
-      }
-
-      function addMarkerBlessed (feature) {
-        var marker = new google.maps.Marker({
-          position: feature.position,
-          icon: icons[feature.type].icon,
-          map: map
-        });
-      }
-
-      function
-    </script>
 
 </head>
 <body>

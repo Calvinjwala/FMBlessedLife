@@ -10,19 +10,17 @@ var express = require('express'),
     cookieParser = require('cookie-parser'),
     cookieSession = require('cookie-session'),
     io = require('socket.io').listen(server);
-    var geocoderProvider = 'google';
-    var httpAdapter = 'http';
-    var geocoder = require('node-geocoder').getGeocoder(geocoderProvider, httpAdapter);
-
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(morgan('dev'));
-app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('_method'));
 
-
+// consumer_key: process.env.TWITTER_KEY,
+// consumer_secret: process.env.TWITTER_SECRET,
+// token: process.env.TWITTER_TOKEN,
+// token_secret: process.env.TWITTER_TOKEN_SECRET
 
 // app.use(passport.initialize());
 // app.use(passport.session());
@@ -55,23 +53,20 @@ io.on('connection', function(socket) {
 
 // stream tweets
 // .emit 'recieve tweet' - calls function within globe_tweet.js file
-t.on('tweet', function (tweet) {
-  blessedCounter = 0;
-  if (tweet != null || tweet != undefined) {
-    blessedCounter++;
-  }
+t.on('tweet', function(tweet) {
   console.log('tweet received: ', tweet);
-  console.log('blessedCounter: ', blessedCounter);
+  // console.log('blessedCounter: ', blessedCounter);
   io.sockets.emit('receive_tweet', tweet);
 });
 
 app.get('/', function(req,res){
   // blessedCounter = 0;
-  // var searchKey1 = '#blessed';
-  // // var searchKey2 = 'fml';
-  // t.track(searchKey1);
-  // // t.track(searchKey2);
-  // console.log('tracking', searchKey1);
+  var searchKey1 = '#blessed';
+  // var searchKey2 = '#fml';
+  t.track(searchKey1);
+  // t.track(searchKey2);
+  console.log('tracking blessed: ', searchKey1);
+  // console.log('tracking fml: ', searchKey2);
   res.render('index');
 });
 

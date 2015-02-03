@@ -1,48 +1,76 @@
 <% include partials/header %>
 
 <div class="container-fluid">
-  <div class="rows">
+  <div class="rows row">
 
     <div class="header col-lg-12 col-md-12">
-      <h4 class="col-lg-8 col-md-8" id="navlogo"><a href="/">#FMBLESSEDLIFE</a></h4>
-      <p class="col-lg-4 col-md-4" id="navlinks"><a href="#">#about</a><a href="#">#contact</a></p>
-    </div>
-
-    <div class="col-lg-6 col-md-6">
-      <div class="col-lg-12 col-md-12">
-        <h4>A war between hashtags: #blessed v. #fml</h4>
-        <button id="tweet-start">Let the Countdown Begin.</button>
-      </div>
-
-      <div class="middleSection col-lg-6 col-md-6" id="tweets">
-        <!-- <div class="twitstream"></div> -->
-        <h1>#blessed</h1>
-      </div>
-
-      <div class="middleSection col-lg-6 col-md-6" id="tweets">
-        <h1>#fml</h1>
-      </div>
-
-    </div>
-
-    <div class="middleSection col-lg-6 col-md-6">
-      <div id="map">
+      <div id="border">
+        <h4 id="navlogo">
+          <a href="/">#FMBLESSEDLIFE</a>
+        </h4>
+        <p id="navlinks">
+          <a href="#">#about</a>
+          <a href="#">#contact</a>
+        </p>
       </div>
     </div>
 
+    <div class="col-lg-12 col-md-12">
 
+
+
+<!-- <div class="row" id="left-search">
+  <button id = "startbutton">
+    <h4> Click to go viral </h4>
+    <div id="tweet-count">
+      <div id="counter"></div>
+    </div>
+  </button>
+<br>
+<br>
+  <div class="row" id="left-scroll">
+    <div class="col-xs-10">
+      <div id="tweetd"></div>
+
+    </div>
+  </div>
+</div> -->
+
+
+      <div class="middleSection col-lg-5 col-md-5" id="tweets">
+        <h4>#blessed</h4>
+        <div id="blessedTweetCount">
+          <div id="blessedCounter"></div>
+        </div>
+        <div id="blessedTweets"></div>
+      </div>
+
+      <div class="col-lg-2 col-md-2">
+        <button id="tweet-start">
+          <p>start</p>
+        </button>
+      </div>
+
+      <div class="middleSection col-lg-5 col-md-5" id="tweets">
+        <h4>#fml</h4>
+        <div id="fml"></div>
+      </div>
+
+    </div>
   </div>
 </div>
 
 <script>
   $(document).ready(function(){
     console.log("hello")
-  });
 
-  $("#tweet-start").on("click", function () {
-    globeTweet.startStream();
-  })
+    $("#tweet-start").click(function() {
+      console.log("clicked")
+      globeTweet.startStream();
+    });
+  });
 </script>
 
 </body>
+<script type="text/javascript" src="/javascripts/globe_tweet.js"></script>
 </html>

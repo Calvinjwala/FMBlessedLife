@@ -1,3 +1,4 @@
+/* GENERAL STYLING */
 @font-face {
     font-family:"Robotor";
     src: url("robotor.ttf") format('truetype');
@@ -13,51 +14,68 @@ a {
   color: black;
 }
 
-/*Header styling*/
+/* HEADER STYLING */
 .header {
   display: inline-block;
   vertical-align: middle;
   margin-top: 20px;
   margin-bottom: 20px;
-  border: 2px solid #3d1b3e;
+}
+
+#border {
+  border: 2px solid black;
+  width: 35%;
+  margin: 0 auto;
 }
 
 #navlogo {
   padding-left: 20px;
   padding-right: 20px;
-  text-align: left;
+  text-align: center;
   vertical-align: middle;
   padding-top: 30px;
-  padding-bottom: 27px;
+  padding-bottom: 15px;
 }
 
 #navlinks {
   padding-left: 20px;
   padding-right: 20px;
-  text-align: right;
+  text-align: center;
   vertical-align: middle;
-  padding-top: 37px;
-  padding-bottom: 27px;
+  padding-bottom: 20px;
 }
 #navlinks a{
   margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* TWITTER STREAM */
 #tweets {
   border: 2px solid black;
-  margin-right: -10px;
-  margin-left: -10px;
+  margin: 0 auto;
+  text-align: left;
 }
 
 .middleSection {
+  margin: 0 auto;
   text-align: center;
   overflow: scroll;
 }
 
-.row {
-  text-align: center;
+/* THE TWEETS!! */
+.theTweets {
+  border: 1px solid black;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  overflow: scroll;
 }
+
+#profPic {
+  margin-left: 0px;
+  left: 0;
+}
+
+
 
 #map {
   height: 450px;
