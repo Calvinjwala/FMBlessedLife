@@ -11,7 +11,7 @@ body {
 }
 
 a {
-  color: black;
+  color: #43d2b2;
 }
 
 /* HEADER STYLING */
@@ -23,7 +23,8 @@ a {
 }
 
 #border {
-  border: 2px solid black;
+  border: 2px solid #4363d2;
+  /*text-shadow: 1px 1px 1px #000;*/
   width: 35%;
   margin: 0 auto;
 }
@@ -49,9 +50,15 @@ a {
   margin-right: 20px;
 }
 
+/*BUTTONS*/
+#resetButton {
+  display: none;
+}
+
+
 /* TWITTER STREAM */
 #tweets {
-  border: 2px solid black;
+  border: 1px solid #4363d2;
   margin: 0 auto;
   text-align: left;
 }
@@ -64,7 +71,7 @@ a {
 
 /* THE TWEETS!! */
 .theTweets {
-  border: 1px solid black;
+  border: 1px solid #39c7fd;
   margin-top: 5px;
   margin-bottom: 5px;
   overflow: scroll;
@@ -73,14 +80,4 @@ a {
 #profPic {
   margin-left: 0px;
   left: 0;
-}
-
-
-
-#map {
-  height: 450px;
-  width: 100%;
-  margin-bottom: 50px;
-  margin: 0 auto;
-  border: 2px solid #eee;
 }

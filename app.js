@@ -60,12 +60,11 @@ t.on('tweet', function(tweet) {
 });
 
 app.get('/', function(req,res){
-  // blessedCounter = 0;
-  var searchKey1 = '#blessed';
+  // var searchKey1 = '#blessed';
   // var searchKey2 = '#fml';
-  t.track(searchKey1);
+  // t.track(searchKey1);
   // t.track(searchKey2);
-  console.log('tracking blessed: ', searchKey1);
+  // console.log('tracking blessed: ', searchKey1);
   // console.log('tracking fml: ', searchKey2);
   res.render('index');
 });

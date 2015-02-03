@@ -1,7 +1,7 @@
 <% include partials/header %>
 
 <div class="container-fluid">
-  <div class="rows row">
+  <div class="rows row col-lg-12 col-md-12">
 
     <div class="header col-lg-12 col-md-12">
       <div id="border">
@@ -16,59 +16,59 @@
     </div>
 
     <div class="col-lg-12 col-md-12">
-
-
-
-<!-- <div class="row" id="left-search">
-  <button id = "startbutton">
-    <h4> Click to go viral </h4>
-    <div id="tweet-count">
-      <div id="counter"></div>
+      <span id="runner"></span><br>
+      <button id="tweet-start">
+        <p id="toggler">start</p>
+      </button>
+       <button id="resetButton">
+        <p>reset</p>
+      </button>
     </div>
-  </button>
-<br>
-<br>
-  <div class="row" id="left-scroll">
-    <div class="col-xs-10">
-      <div id="tweetd"></div>
 
+    <div class="middleSection col-lg-6 col-md-6" id="tweets">
+      <p>people are #blessed</p>
+      <div id="blessedTweetCount">
+        <div id="blessedCounter"></div>
+      </div>
+      <div id="blessedTweets"></div>
     </div>
-  </div>
-</div> -->
 
-
-      <div class="middleSection col-lg-5 col-md-5" id="tweets">
-        <h4>#blessed</h4>
-        <div id="blessedTweetCount">
-          <div id="blessedCounter"></div>
-        </div>
-        <div id="blessedTweets"></div>
+    <div class="middleSection col-lg-6 col-md-6" id="tweets">
+      <p>people say #fml</p>
+      <div id="fmlTweetCount">
+        <div id="fmlCounter"></div>
       </div>
-
-      <div class="col-lg-2 col-md-2">
-        <button id="tweet-start">
-          <p>start</p>
-        </button>
-      </div>
-
-      <div class="middleSection col-lg-5 col-md-5" id="tweets">
-        <h4>#fml</h4>
-        <div id="fml"></div>
-      </div>
-
+      <div id="fmlTweets"></div>
     </div>
+
   </div>
 </div>
 
 <script>
-  $(document).ready(function(){
-    console.log("hello")
+$(document).ready(function(){
 
-    $("#tweet-start").click(function() {
-      console.log("clicked")
-      globeTweet.startStream();
-    });
+  console.log("hello")
+
+  $('#runner').runner('reset', true);
+
+  $('#runner').runner({
+    autostart: false,
+    countdown: true,
+    startAt: 60000,
+    stopAt: 0,
+    milliseconds: false,
   });
+
+  $("#tweet-start").click(function() {
+    globeTweet.startStream();
+    $('#runner').runner('start');
+  });
+
+  $("#toggler").click(function(){
+    this.innerHTML
+  })
+
+});
 </script>
 
 </body>
