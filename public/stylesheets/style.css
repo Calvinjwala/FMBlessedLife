@@ -11,6 +11,7 @@ body {
   height: 100%;
   padding-left: 30px;
   padding-right: 30px;
+  font-size: 15px;
 }
 
 h4 {
@@ -43,7 +44,7 @@ button {
 
 /* HEADER STYLING */
 #logo{
-  height: 200px;
+  height: 245px;
 }
 
 .header {
