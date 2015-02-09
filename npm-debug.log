@@ -1,0 +1,96 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '--save', 'http' ]
+2 info using npm@2.5.0
+3 info using node@v0.10.36
+4 warn package.json fmbl@1.0.0 No repository field.
+5 warn package.json http@0.0.0 http is also the name of a node core module.
+6 warn package.json http@0.0.0 No description
+7 warn package.json http@0.0.0 No repository field.
+8 warn package.json io@0.1.6 No description
+9 silly cache add args [ 'http@0.0.0', null ]
+10 verbose cache add spec http@0.0.0
+11 silly cache add parsed spec { raw: 'http@0.0.0',
+11 silly cache add   scope: null,
+11 silly cache add   name: 'http',
+11 silly cache add   rawSpec: '0.0.0',
+11 silly cache add   spec: '0.0.0',
+11 silly cache add   type: 'version' }
+12 verbose addNamed http@0.0.0
+13 silly addNamed semver.valid 0.0.0
+14 silly addNamed semver.validRange 0.0.0
+15 silly mapToRegistry name http
+16 silly mapToRegistry using default registry
+17 silly mapToRegistry registry https://registry.npmjs.org/
+18 silly mapToRegistry uri https://registry.npmjs.org/http
+19 verbose addNameVersion registry:https://registry.npmjs.org/http not in flight; fetching
+20 verbose request uri https://registry.npmjs.org/http
+21 verbose request no auth needed
+22 info attempt registry request try #1 at 14:14:39
+23 verbose request id b200f5697eabaef4
+24 verbose etag "D0Z2FWJ9DG3QMTM8Q5VZPZ67W"
+25 http request GET https://registry.npmjs.org/http
+26 http 304 https://registry.npmjs.org/http
+27 silly get cb [ 304,
+27 silly get   { date: 'Fri, 06 Feb 2015 22:14:39 GMT',
+27 silly get     server: 'Apache',
+27 silly get     via: '1.1 varnish',
+27 silly get     'last-modified': 'Fri, 06 Feb 2015 22:14:40 GMT',
+27 silly get     'cache-control': 'max-age=60',
+27 silly get     etag: '"D0Z2FWJ9DG3QMTM8Q5VZPZ67W"',
+27 silly get     age: '0',
+27 silly get     'x-served-by': 'cache-lax1435-LAX',
+27 silly get     'x-cache': 'MISS',
+27 silly get     'x-cache-hits': '0',
+27 silly get     'x-timer': 'S1423260879.966260,VS0,VE78',
+27 silly get     vary: 'Accept',
+27 silly get     'content-length': '0',
+27 silly get     'keep-alive': 'timeout=10, max=50',
+27 silly get     connection: 'Keep-Alive' } ]
+28 verbose etag https://registry.npmjs.org/http from cache
+29 verbose get saving http to /Users/calvinj/.npm/registry.npmjs.org/http/.cache.json
+30 silly cache afterAdd http@0.0.0
+31 verbose afterAdd /Users/calvinj/.npm/http/0.0.0/package/package.json not in flight; writing
+32 verbose afterAdd /Users/calvinj/.npm/http/0.0.0/package/package.json written
+33 silly install resolved [ { name: 'http',
+33 silly install resolved     version: '0.0.0',
+33 silly install resolved     main: 'index.js',
+33 silly install resolved     scripts: { test: 'echo "Error: no test specified" && exit 1' },
+33 silly install resolved     author: '',
+33 silly install resolved     license: 'BSD-2-Clause',
+33 silly install resolved     _id: 'http@0.0.0',
+33 silly install resolved     dist:
+33 silly install resolved      { shasum: '86e6326d29c5d039de9fac584a45689f929f4f72',
+33 silly install resolved        tarball: 'http://registry.npmjs.org/http/-/http-0.0.0.tgz' },
+33 silly install resolved     _from: 'http@0.0.0',
+33 silly install resolved     _npmVersion: '1.3.15',
+33 silly install resolved     _npmUser: { name: 'yuanyan', email: 'yuanyan.cao@gmail.com' },
+33 silly install resolved     maintainers: [ [Object] ],
+33 silly install resolved     directories: {},
+33 silly install resolved     _shasum: '86e6326d29c5d039de9fac584a45689f929f4f72',
+33 silly install resolved     _resolved: 'https://registry.npmjs.org/http/-/http-0.0.0.tgz',
+33 silly install resolved     readme: 'ERROR: No README data found!' } ]
+34 info install http@0.0.0 into /Users/calvinj/Code_Post_GA/Node/fmbl
+35 info installOne http@0.0.0
+36 verbose installOne of http to /Users/calvinj/Code_Post_GA/Node/fmbl not in flight; installing
+37 warn locking Error: EACCES, open '/Users/calvinj/.npm/_locks/http-f68ffeb4a6a8beb4.lock'
+37 warn locking  /Users/calvinj/.npm/_locks/http-f68ffeb4a6a8beb4.lock failed { [Error: EACCES, open '/Users/calvinj/.npm/_locks/http-f68ffeb4a6a8beb4.lock']
+37 warn locking   errno: 3,
+37 warn locking   code: 'EACCES',
+37 warn locking   path: '/Users/calvinj/.npm/_locks/http-f68ffeb4a6a8beb4.lock' }
+38 verbose stack Error: Attempt to unlock /Users/calvinj/Code_Post_GA/Node/fmbl/node_modules/http, which hasn't been locked
+38 verbose stack     at unlock (/usr/local/lib/node_modules/npm/lib/utils/locker.js:66:11)
+38 verbose stack     at cb (/usr/local/lib/node_modules/npm/lib/install.js:929:5)
+38 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:933:20
+38 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/locker.js:40:9
+38 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:149:38)
+38 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:177:38
+38 verbose stack     at Object.oncomplete (fs.js:108:15)
+39 verbose cwd /Users/calvinj/Code_Post_GA/Node/fmbl
+40 error Darwin 13.4.0
+41 error argv "node" "/usr/local/bin/npm" "install" "--save" "http"
+42 error node v0.10.36
+43 error npm  v2.5.0
+44 error Attempt to unlock /Users/calvinj/Code_Post_GA/Node/fmbl/node_modules/http, which hasn't been locked
+45 error If you need help, you may report this error at:
+45 error     <http://github.com/npm/npm/issues>
+46 verbose exit [ 1, true ]
