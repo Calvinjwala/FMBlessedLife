@@ -9,6 +9,8 @@ body {
   font-family: "Robotor", Arial;
   /*color: #3F87BA;*/
   height: 100%;
+  padding-left: 30px;
+  padding-right: 30px;
 }
 
 h4 {
