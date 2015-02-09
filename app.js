@@ -2,8 +2,6 @@ var express = require('express'),
     app = express(),
     server = require('http').createServer(app),
     ejs = require('ejs'),
-    passport = require('passport'),
-    passportLocal = require('passport-local'),
     oauth = require('oauth'),
     morgan = require('morgan'),
     methodOverride = require('method-override'),
@@ -12,7 +10,6 @@ var express = require('express'),
     cookieParser = require('cookie-parser'),
     cookieSession = require('cookie-session'),
     socketIo = require('socket.io-client'),
-    nodeTweetStream = require('node-tweet-stream'),
     io = require('socket.io').listen(server);
 
 

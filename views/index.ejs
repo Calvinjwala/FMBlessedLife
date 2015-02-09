@@ -101,7 +101,7 @@ $(window).load(function(){
     counter++;
     var $this = $(this);
     globeTweet.startStream();
-    $('#runner').runner('start');
+    // $('#runner').runner('start');
 
     $this.toggleClass("toggler");
 
@@ -114,16 +114,16 @@ $(window).load(function(){
 
     if (counter % 2 == 0) {
       console.log(counter)
-      $('#runner').runner('STOP');
+      // $('#runner').runner('STOP');
       globeTweet.stopStream();
     };
   });
 
   var time
 
-  function myTimer() {
-    time = $("#runner").text();
-  }
+  // function myTimer() {
+  //   time = $("#runner").text();
+  // }
 
   $('#contact').hide();
 
