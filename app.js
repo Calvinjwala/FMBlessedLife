@@ -2,6 +2,8 @@ var express = require('express'),
     app = express(),
     server = require('http').createServer(app),
     ejs = require('ejs'),
+    passport = require('passport'),
+    passportLocal = require('passport-local'),
     oauth = require('oauth'),
     morgan = require('morgan'),
     methodOverride = require('method-override'),
@@ -9,7 +11,10 @@ var express = require('express'),
     flash = require('connect-flash'),
     cookieParser = require('cookie-parser'),
     cookieSession = require('cookie-session'),
+    socketIo = require('socket.io-client'),
+    nodeTweetStream = require('node-tweet-stream'),
     io = require('socket.io').listen(server);
+
 
 app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
@@ -43,6 +48,7 @@ var Twitter = require('node-tweet-stream'),
 // connect to socket
 io.on('connection', function(socket) {
   console.log('user connected');
+
   socket.on('disconnect', function() {
   console.log('user disconnected');
   });
@@ -62,21 +68,13 @@ app.get('/', function(req,res){
   var searchKey2 = '#fml';
   t.track(searchKey1);
   t.track(searchKey2);
-  console.log('tracking blessed: ', searchKey1);
-  console.log('tracking fml: ', searchKey2);
+  // console.log('tracking blessed: ', searchKey1);
+  // console.log('tracking fml: ', searchKey2);
   res.render('index');
 });
 
-app.get('*', function(req,res){
+app.get('/*', function(req,res){
   res.render('404');
-});
-
-app.get('/about', function(req,res){
-  res.render('index');
-});
-
-app.get('/contact', function(req,res){
-  res.render('contact');
 });
 
 server.listen(process.env.PORT || 3000, function(){
